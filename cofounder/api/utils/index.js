@@ -5,12 +5,10 @@ import render from "@/utils/render.js";
 import firebase from "@/utils/firebase.js";
 import storage from "@/utils/storage.js";
 import load from "@/utils/load.js";
-import anthropic from "@/utils/anthropic.js";
 
 export default {
 	parsers,
 	openai,
-	anthropic,
 	vectra,
 	render,
 	firebase,

@@ -57,11 +57,7 @@ async function opLlmGen({ context, data }) {
 		parser = utils.parsers.parse.yaml;
 	}
 
-	const llm_fn = !process.env.LLM_PROVIDER
-		? utils.openai.inference
-		: process.env.LLM_PROVIDER.toLowerCase() === "openai"
-			? utils.openai.inference
-			: utils.anthropic.inference;
+	const llm_fn = utils.openai.inference;
 
 	const { text, usage } = await llm_fn({
 		model: model,
@@ -149,7 +145,7 @@ async function opLlmDebugSimulate({ context, data }) {
 	/*
 		debug : simulate a stream
 	*/
-	const { project, operation } = context;
+	const { project, operation } = context.
 
 	console.dir(
 		{
